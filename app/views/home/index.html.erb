@@ -1,0 +1,55 @@
+<div class="main-container">
+	<div>	
+		<h5 class="first-title">Devo abastecer com </h5>
+		<h5 class="second-title"><span class="alcool">ÀLCOOL</span> ou <span class="gasolina">GASOLINA</span> ?</h4>
+		<div class="card main-card">
+			<div class="card-content ">
+				<div class="input-field col s6">
+					<img class="material-icons prefix" src="/icon-alcool.png" alt="" width="100"/>
+					<input id="icon_prefix" id="alcool" type="number"  name="alcool" placeholder="R$ 2,49" class="alcool-input"> 
+					<label for="icon_prefix" class="alcool-label">Preço do Álcool</label>
+				</div>
+				<div class="input-field col s6">
+					<img class="material-icons prefix" src="/icon-gasolina.png" alt="" width="100"/>
+					<input id="icon_prefix" type="text" placeholder="R$ 2,49" class="gasolina-input">
+					<label for="icon_prefix" class="alcool-label">Preço da Gasolina</label>
+				</div>
+
+
+
+				<a onclick="calcular()" class="waves-effect waves-light btn-large calcbutton">CALCULAR</a>
+			</div>
+			<div class="card-action">
+				<p>É mais econômico abastecer com</p>
+				<h5 class="resultado"></h5>
+			</div>
+		</div>
+		<img src="/logo-1.png" class="onebitlogo" alt=""/>
+	</div>
+
+</div>
+
+<script>
+
+
+
+
+const calcular = () => {
+let alcool = $('.alcool-input').val();
+let gasolina = $('.gasolina-input').val();
+let resultado = $('.resultado').val();
+	console.log(gasolina);
+axios.post('/calcular', {
+	    alcool: alcool,
+		  gasolina: gasolina, 
+						  })
+  .then(function (response) {
+		    console.log(response);
+				$('.resultado').text(response.data)
+	 })
+  .catch(function (error) {
+		    console.log(error);
+				  });
+}
+
+</script>

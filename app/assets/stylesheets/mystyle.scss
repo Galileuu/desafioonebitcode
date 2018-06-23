@@ -1,0 +1,68 @@
+.main-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 80px;
+}
+.main-card {
+	width: 400px !important;
+}
+
+body {
+	background-image: url('/pattern-desafio.png')
+}
+
+.first-title {
+	color: #747474;
+	font-weight: bold;
+	text-align: center;
+}
+
+.second-title {
+	color: #747474;
+	text-align: center;
+	font-weight: bold;
+}
+
+.alcool {
+	color: #6ed949;
+}
+
+.gasolina {
+	color: #f50063;
+}
+
+.alcool-input {
+	margin-left: 70px !important;
+	width: 250px !important;
+}
+
+.alcool-label {
+	margin-left: 57px !important;
+}
+
+.gasolina-input {
+	margin-left: 70px !important;
+	width: 250px !important;
+}
+
+.gasolina-label {
+	margin-left: 57px !important;
+}
+
+.calcbutton {
+	background-color: #6299ef !important;
+	text-align: center;
+	width: 100%;
+}
+
+.onebitlogo {
+	width: 200px;
+	float: right;
+}
+.resultado {
+	color: #77db55;	
+	font-weight: bold;
+}
+
